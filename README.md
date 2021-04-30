@@ -7,3 +7,6 @@ To conduct this analysis,
 * Create a GEM using SRA data and GEMmaker.
 * Preprocess the GEM through log2 and quantile normalization.
 * Construct a GCN from the processed GEM.
+## Lab Tasks
+### Task A: Making the GEM
+1. *Clone GEMmaker*. 
