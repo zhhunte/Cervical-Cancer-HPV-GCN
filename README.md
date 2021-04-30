@@ -10,3 +10,5 @@ To conduct this analysis,
 ## Lab Tasks
 ### Task A: Making the GEM
 1. *Clone GEMmaker*. 
+Make a new working directory and use github to clone GEMmaker inside that directory. 
+> git clone https://github.com/SystemsGenetics/GEMmaker.git --branch develop
