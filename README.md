@@ -46,4 +46,6 @@ Using nextflow, run GEMmaker from /GEMmaker directory containing the main.nf fil
 Create and activate a conda environment called gemprep containing all of the necessary dependencies. 
 > conda create -n gemprep python=3.6 matplotlib mpi4py numpy pandas r scikit-learn seaborn
 source 
-activate gemprep
+
+> conda activate gemprep
+
