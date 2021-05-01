@@ -41,3 +41,9 @@ SRR13858073
 6. *Run GEMmaker.*
 Using nextflow, run GEMmaker from /GEMmaker directory containing the main.nf file. 
 > nextflow run main.nf -profile standard -with-singularity -with-report -with-timeline
+### Task B: Preprocessing the GEM
+1. *Install the GEMprep environment*.
+Create and activate a conda environment called gemprep containing all of the necessary dependencies. 
+> conda create -n gemprep python=3.6 matplotlib mpi4py numpy pandas r scikit-learn seaborn
+source 
+activate gemprep
