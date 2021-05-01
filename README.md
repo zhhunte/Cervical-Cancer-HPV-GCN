@@ -55,6 +55,17 @@ Use github to clone GEMprep in the working directory.
 Copy the cervix-HPV GEM into the resulting /GEMprep directory and 'cd' there. 
 3. *Normalize the GEM*.
 * Log2 transformation:
-> python ./bin/normalize.py cervix-HPV.GEM.txt cervix-HPV.GEM.log2.txt --log2
+> python ./bin/normalize.py cervix-HPV.GEM.txt  cervix-HPV.GEM.log2.txt --log2
 * Quantile normalization:
-> python ./bin/normalize.py cervix-HPV.GEM.txt cervix-HPV.GEM.log2.quantile.txt --quantile
+> python ./bin/normalize.py cervix-HPV.GEM.txt  cervix-HPV.GEM.log2.quantile.txt --quantile
+### Task C: Constructing the GCN
+1. *Add '.emx.txt' to the end of the input GEM file*.
+Rename the input GEM file so that it ends in '.emx.txt'. This is so KINC recognizes it as an input GEM. For example, if the GEM file is named 'cervix-HPV.GEM.log2.quantile.txt', it should be renamed as 'cervix-HPV.GEM.log2.quantile.emx.txt'.
+2. *Run the Nextflow version of the KINC workflow*. 
+First, make sure there is a /tmpfiles directory for Nextflow to write files. For the purposes of this lab, /tmpfiles was within the directory '/home/student'.
+> export TMPDIR=/home/student/tmpfiles
+Make a new directory called '/input' within the working directory and copy the '.emx.txt' GEM file into it. This is where KINC looks for the input GEM. Once in, the workflow should be ready to run from the working directory: 
+> nextflow run systemsgenetics/KINC-nf -with-singularity -resume
+**WARNING: I did not succeed in GCN construction due to a 'threshold.rmt' error while running the KINC workflow.**
+3. *Visualize the GCN*. 
+Install Cytoscape on your local computer.  Follow install instructions here: https://cytoscape.org/. Open Cytoscape and drag in the GCN network file to visualize.
