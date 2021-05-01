@@ -49,3 +49,6 @@ source
 
 > conda activate gemprep
 
+2. *Clone GEMprep*.
+Use github to clone GEMprep in the working directory. "cd" to the resulting /GEMprep directory.
+> git clone https://github.com/SystemsGenetics/GEMprep
