@@ -50,5 +50,11 @@ source
 > conda activate gemprep
 
 2. *Clone GEMprep*.
-Use github to clone GEMprep in the working directory. "cd" to the resulting /GEMprep directory.
+Use github to clone GEMprep in the working directory. 
 > git clone https://github.com/SystemsGenetics/GEMprep
+Copy the cervix-HPV GEM into the resulting /GEMprep directory and 'cd' there. 
+3. *Normalize the GEM*.
+* Log2 transformation:
+> python ./bin/normalize.py cervix-HPV.GEM.txt cervix-HPV.GEM.log2.txt --log2
+* Quantile normalization:
+> python ./bin/normalize.py cervix-HPV.GEM.txt cervix-HPV.GEM.log2.quantile.txt --quantile
